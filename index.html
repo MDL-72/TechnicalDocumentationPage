@@ -1,0 +1,142 @@
+<html>
+
+<link href= "css.css" rel = "stylesheet" type = "text/css">
+<nav id="navbar">
+  <header>Anything About HTML & CSS</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a>       </li>
+    
+    <li><a class="nav-link" href="#HTML?"
+        >HTML?</a>
+    </li>
+    
+    <li><a class="nav-link" href="#CSS_Basics">CSS Basics</a>
+    </li>
+    
+    <li><a class="nav-link" href="#What_is_CSS?">What is CSS?</a>
+    </li>
+    
+    <li><a class="nav-link" href="#Images">Images</a>      
+    </li>
+    
+    <li><a href="#anatomy_of_an_html_document" class="nav-link">Anatomy of an HTML document</a></li>
+  </ul>
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header class="main-header">Introduction</header>
+      <article>
+        <p>Introduction to HTML (<strong>H</strong>ypertext <strong>M</strong>arkup <strong>L</strong>anguage) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables. As the title suggests, this article will give you a basic understanding of HTML and its functions.
+        </p>
+      </article> 
+  </section>
+  
+  <section class="main-section" id="HTML?">
+    <header class="main-header">HTML?</header>
+    <article>
+      <p>HTML is a markup language that defines the structure of your content. HTML consists of a series of elements, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing tags can make a word or image hyperlink to somewhere else, can italicize words, can make the font bigger or smaller, and so on.  For example, take the following line of content:</p>
+    
+   <code class="codetext">My cat is very grumpy</code>
+   
+<p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in paragraph tags:</p>
+
+      <p><code class="codetext">&lt;p&#62;My cat is very grumpy&lt;p&#62;</code></p>
+   </article>  
+</section>
+  
+  <section class="main-section" id="CSS_Basics">
+    <header>CSS Basics</header>
+    <article>
+      <p> CSS (Cascading Style Sheets) is the code that styles web content. CSS basics walks through what you need to get started. We'll answer questions like: How do I make text red? How do I make content display at a certain location in the (webpage) layout? How do I decorate my webpage with background images and colors? </p>
+    </article>
+  </section>
+  
+  <section class="main-section" id="What_is_CSS?">
+    <header> What is CSS? </header>
+    <article>
+      <p> Like HTML, CSS is <span class="bold"> NOT</span> a programming language. It's <span class="bold"> NOT </span> a markup language either. <span class="bold"> CSS is a style sheet language. </span> CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to red: </p>
+      <code class="codetext"> p {
+        color: red;
+        }
+      </code>
+      <p> Let's try it out! Using a text editor, paste the three lines of CSS (above) into a new file. Save the file as <code>style.css</code> in a directory named <code>styles</code>. </p>
+      <p> To make the code work, we still need to apply this CSS (above) to an HTML document. Otherwise, the styling won't change the appearance of the HTML.</p>
+      <ol>
+        <li> Create an <code>index.html</code> file in a text editor of your choice. Paste the following line in the head (between the <code>&lt;head&gt;</code> and <code>&lt;/head&gt;</code> tags):
+          <code>&lt;link href="styles/style.css" rel="stylesheet"&gt;</code>
+        </li>
+        <li> Create a <code>&lt;p&gt;</code> tag and put some text into it. Close the tag, save the <code>index.html</code> file and load it in your browser. This is an example of how <code>&lt;p&gt;</code> looks like after we applied CSS:</li>
+        <figure> <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-styled.png" alt="example showcasing CSS text" class="img-example">
+          <figcaption> If your paragraph text is red, congratulations! Your CSS is working. </figcaption>
+        </figure>
+      </ol>
+
+    </article>
+  </section>
+  
+  <section id="Images"class="main-section">
+    <header>Images</header>
+    <article>
+      <p>Let's turn our attention to the <code>&lt;img&gt;</code> element again:</p>
+      <code class="codetext">&lt;img src="images/firefox-icon.png" alt="My test image"&gt;
+      </code>
+      <p>As we said before, it embeds an image into our page in the position it appears. It does this via the src (source) attribute, which contains the path to our image file.</p>
+      <p>We have also included an <code>alt</code> (alternative) attribute. In this attribute, you specify descriptive text for users who cannot see the image, possibly because of the following reasons:
+</p>
+      <ol>
+        <li>They are visually impaired. Users with significant visual impairments often use tools called screen readers to read out the alt text to them.
+        </li>
+        <li>Something has gone wrong causing the image not to display. For example, try deliberately changing the path inside your <code>src</code> attribute to make it incorrect. If you save and reload the page, you should see something like this in place of the image:
+</li>
+      </ol>
+      <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/alt-text-example.png" id="testimage">
+      <p>The keywords for alt text are "descriptive text". The alt text you write should provide the reader with enough information to have a good idea of what the image conveys. In this example, our current text of "My test image" is no good at all. A much better alternative for our Firefox logo would be "The Firefox logo: a flaming fox surrounding the Earth."</p>
+      <p>Try coming up with some better alt text for your image now.</p>
+      <code class="codetext">Find out more about accessibility in our <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility" target="_blank">accessibility learning module.</a>
+</code>
+    </article>
+  </section>
+  
+  <section id="anatomy_of_an_html_document" class="main-section">
+    <header>Anatomy of an HTML document
+    </header>
+    <article>
+      <p>
+        That wraps up the basics of individual HTML elements, but they aren't handy on their own. Now we'll look at how individual elements are combined to form an entire HTML page. Let's revisit the code we put into our <code>index.html</code> example (which we first met in the <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files" target="_blank">Dealing with files article</a>):
+      </p>
+      <code class="codetext">&lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &nbsp;&lt;head&gt;
+        &nbsp;&nbsp;&lt;meta charset="utf-8"&gt;
+        &nbsp;&nbsp;&lt;title>My test page&lt;/title&gt;
+        &nbsp;&lt;/head&gt;
+        &nbsp;&lt;body&gt;
+        &nbsp;&nbsp;&lt;img src="images/firefox-icon.png" alt="My test image"&gt;
+        &nbsp;&lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+      <p>Here, we have the following:</p>
+      <ul>
+        <li>
+          <code>&lt;!DOCTYPE html&gt;</code> — doctype. It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
+        </li>
+        <li>
+          <code>&lt;html&gt;&lt;/html&gt;</code> — the <code>&lt;html&gt;</code> element. This element wraps all the content on the entire page and is sometimes known as the root element.
+        </li>
+        <li>
+          <code>&lt;head&gt;&lt;/head&gt;</code> — the <code>&lt;head&gt;</code> element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
+        </li>
+        <li>
+          <code>&lt;meta charset="utf-8"&gt;</code> — This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this and it can help avoid some problems later on.
+        </li>
+        <li>
+          <code>&lt;title&gt;&lt;/title&gt;</code> — the <code>&lt;title&gt;</code> element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it.
+        </li>
+        <li><code>&lt;body&gt;&lt;/code&gt;</code> — the <code>&lt;body&gt;</code> element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.</li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+</html>
